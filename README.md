@@ -24,7 +24,10 @@ s_1 \\ s_2
 0 \\ F
 \end{bmatrix} = \begin{bmatrix}
 u_1 \\ u_2
-\end{bmatrix}\\
+\end{bmatrix}
+$$
+
+$$
 \dot{\bar{x}} = \begin{bmatrix} \dot{x} \\ \ddot{x} \end{bmatrix} = \begin{bmatrix}
 \dot{x} \\
 \frac{F - c\dot{x} - kx}{m}
