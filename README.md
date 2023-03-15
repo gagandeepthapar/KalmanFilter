@@ -16,19 +16,26 @@ If the state vector, $\bar{x}$ is defined as the position and velocity and $u$ i
 
 $$
 \bar{x} = \begin{bmatrix}
-x \\ \dot{x}
+x \\
+\dot{x}
 \end{bmatrix} =  \begin{bmatrix}
-s_1 \\ s_2
+s_1 \\
+s_2
 \end{bmatrix}
 \quad u =  \begin{bmatrix}
-0 \\ F
+0 \\
+F
 \end{bmatrix} = \begin{bmatrix}
-u_1 \\ u_2
+u_1 \\
+u_2
 \end{bmatrix}
 $$
 
 $$
-\dot{\bar{x}} = \begin{bmatrix} \dot{x} \\ \ddot{x} \end{bmatrix} = \begin{bmatrix}
+\dot{\bar{x}} = \begin{bmatrix}
+\dot{x} \\
+\ddot{x}
+\end{bmatrix} = \begin{bmatrix}
 \dot{x} \\
 \frac{F - c\dot{x} - kx}{m}
 \end{bmatrix} = \begin{bmatrix}
