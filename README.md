@@ -4,17 +4,17 @@ Exploration of Kalman Filters in Python and C++. Part of a larger project to sim
 ## The System
 For arbitrary spring constant, $k$, dampening coefficient, $c$, mass, $m$, and input force, $F$, the system dynamics can be written as 
 
-$\begin{align}
+$$
 m\ddot{x} = F - c\dot{x} - kx \\
-\end{align}$
+$$
 
-$\begin{align}
+$$
 \ddot{x} = \frac{F - c\dot{x} - kx}{m}
-\end{align}$
+$$
 
 If the state vector, $\bar{x}$ is defined as the position and velocity and $u$ is defined as the input force $F$, the state derivative can be derived using (2).
 
-$\begin{align}
+$$
 \bar{x} = \begin{bmatrix}
 x \\ \dot{x}
 \end{bmatrix} =  \begin{bmatrix}
@@ -32,7 +32,7 @@ u_1 \\ u_2
 s_2 \\
 \frac{1}{m}\left(u_2 - cs_2 - ks_1\right)
 \end{bmatrix}
-\end{align}$
+$$
 
 While this can be solved analytically using the [state transformation](https://web.mit.edu/2.14/www/Handouts/StateSpaceResponse.pdf), another method is to propagate the system manually (e.g., with a Runge Kutta solver) and keep track of the states and inputs. This is what this mini-project will do to explore Kalman Filtering as it requires the system dynamics be known and used during the prediction step.
 
