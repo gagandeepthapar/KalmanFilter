@@ -13,7 +13,10 @@ A Kalman Filter is technically a misnomer. Kalman Filters do not filter data, ne
 The Kalman filter is ideal based on the calculation of the Kalman Gain, $K$. The Kalman Gain attempts to minimize the covariance of the state via an Optimal Control approach; e.g., 
 
 $$
-J(\mathbf{K}) = \text{tr}[\mathbf{P}] \\
+J(\mathbf{K}) = \text{tr}[\mathbf{P}]
+$$
+
+$$
 \text{(Spacecraft Dynamics and Control; DeRuiter)}
 $$
 
@@ -100,8 +103,17 @@ While this system can be solved analytically using the [state transformation](ht
 ### System Dynamics
 $$
 x_k = F_{k-1}x_{k-1} + G_{k-1}u_{k-1} + L_{k-1}w_{k-1} \\
+$$
+
+$$
 y_k = H_kx_k + M_kv_k \\
+$$
+
+$$
 w_k \sim \sigma(0, Q_k) \\
+$$
+
+$$
 v_k \sim \sigma(0, R_k) \\
 $$
 
@@ -117,6 +129,9 @@ $$
 
 $$
 P_k^- = FP_{k-1}F^T + LQL^T \\
+$$
+
+$$
 \text{(Spacecraft Dynamics and Control; DeRuiter)}
 $$
 
@@ -166,4 +181,5 @@ P = \begin{bmatrix}
 \sigma_m\sigma_1 & \sigma_m\sigma_2 & \dots & \sigma_m^2
 \end{bmatrix}
 $$
+
 where an element of $P$, $P_{ij}$, represents the covariance of state $i$ and state $j$. **Aside:** notice that $P$ is symmetric as $\sigma_1\sigma_2$ is equivalent to $\sigma_2\sigma_1$; this can help improve computation in some cases by exploiting the properties of symmetric matrices. If $i == j$ then it is said that $P_{ij}$ represents the variance of that state. In practice, the variance of the state represents the confidence of that state; a higher variance value correlates with lower confidence and visa versa. The goal for the Kalman Gain, $K$, is to minimize the main diagonal of $P$, that is, to minimize the variance of the states (and thereby maximizing confidence in the estimate).
