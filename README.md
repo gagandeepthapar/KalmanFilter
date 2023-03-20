@@ -16,6 +16,7 @@ $$
 J(\mathbf{K}) = \text{tr}[\mathbf{P}] \\
 \text{(Spacecraft Dynamics and Control; DeRuiter)}
 $$
+
 where $J$ is the cost function being minimized and the "tr" function is the trace whereby the main diagonal of $\mathbf{P}$ is the covariance of the state. 
 
 
@@ -112,6 +113,9 @@ The Predictor-Corrector setup is also given by DeRuiter and is summarized below
 
 $$
 \hat{x}^-_k = F\hat{x}_{k-1} + Gu_{k-1} \\
+$$
+
+$$
 P_k^- = FP_{k-1}F^T + LQL^T \\
 \text{(Spacecraft Dynamics and Control; DeRuiter)}
 $$
@@ -122,8 +126,17 @@ Where the minus subscript, $\square^-$, represents the *a priori*, or "before kn
 
 $$
 W_k = HP_k^-H^T + MRM^T \\
+$$
+
+$$
 K_k = P_k^-H^TW^{-1}_k \\
+$$
+
+$$
 \hat{x}_k = \hat{x}^-_k + K_k(y_k - \hat{y}_k^-) \\
+$$
+
+$$
 P_k = P_k^- - K_kHP_k^- - P_k^-H^TK_k^T + K_kW_kK_k^T
 $$
 
@@ -149,7 +162,7 @@ $$
 P = \begin{bmatrix}
 \sigma_1^2 & \sigma_1\sigma_2 & \dots & \sigma_1\sigma_m \\
 \sigma_1\sigma_2 & \sigma_2^2 & \dots & \sigma_2\sigma_m \\
-\vdots & \vdots & \ddots & \vdots\\
+\vdots & \vdots & \ddots & \vdots \\
 \sigma_m\sigma_1 & \sigma_m\sigma_2 & \dots & \sigma_m^2
 \end{bmatrix}
 $$
