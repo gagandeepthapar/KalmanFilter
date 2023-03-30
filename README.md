@@ -117,7 +117,7 @@ $$
 v_k \sim \sigma(0, R_k) \\
 $$
 
-Where the subscript represents the time index, $x_k$ represents the state estimation, $y_k$ represents the state estimate measurement, $F_i$ represents the dynamics of the system at time $i$, $G_i$ represents the affect of the input on the state at time $i$, $L$ and $M$ represent the mapping of the noise to the state and measurement respectively, $w$ and $v$ represent the noise in the state estimation and measurement process respectively, and $Q$ and $R$ represent the covariance of the estimation and measurement processes respectively. For time-invariant system (e.g., the system dynamics do not change over time), $F, G, L, H, M$ can all be held constant instead of being evaluated at each timestep.
+Where the subscript represents the time index, $x_k$ represents the state estimation, $y_k$ represents the state estimate measurement, $F_i$ represents the propagation of the dynamics of the system at time $i$, $G_i$ represents the affect of the input on the state at time $i$, $L$ and $M$ represent the mapping of the noise to the state and measurement respectively, $w$ and $v$ represent the noise in the state estimation and measurement process respectively, and $Q$ and $R$ represent the covariance of the estimation and measurement processes respectively. For time-invariant system (e.g., the system dynamics do not change over time), $F, G, L, H, M$ can all be held constant instead of being evaluated at each timestep.
 
 The Predictor-Corrector setup is also given by DeRuiter and is summarized below
 
