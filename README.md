@@ -1,6 +1,9 @@
-# **Kalman Filter and Plotting**
+# **State Estimation and Plotting**
 ## **Context**
-Exploration of Kalman Filters in Python and C++. Part of a larger project to simulate rocket landings in real-time in C++. This repository will hold some more theory/background on the Kalman Filter specifically as it relates to data handling and real-time data smoothing.
+Exploration of State Estimation, especially Kalman Filters, in C++. Part of a larger project to simulate rocket landings in real-time in C++. This repository will hold some more theory/background on the Kalman Filter specifically as it relates to data handling and real-time data smoothing.
+
+This repository will focus on the Kalman Filter as it is the optimal estimator with respect to minimizing uncertainty, however, other estimators exist and are often used to make the trade-off for computation resources.
+
 
 ## **Overview**
 ### Dynamic System
